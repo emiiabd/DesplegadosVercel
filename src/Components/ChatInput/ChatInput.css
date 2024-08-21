@@ -1,0 +1,46 @@
+.chatInput{
+  padding-top: 4px;
+  z-index: 2;
+  min-height: 56px;
+  border-top: 1px solid var(--gray-color);
+  } 
+
+.inputForm{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 6px;
+  }
+
+.textInput{
+  width: 100%;
+  font-size: 14px;
+  max-height: 100%;
+  border: none;
+  border-radius: 6px;
+  scrollbar-width: none;
+  resize: none;
+  outline: none;
+  padding: 5px;
+  background-color: var(--grayLight-color);
+}
+
+.btnSendMsg{
+  min-height: 42px;
+  min-width: 42px;
+  margin-right: 3px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: var(--primary-color);
+  background-color: #37819ff2;
+}
+
+.btnSendMsg:hover{
+  box-shadow: 0 0 2px 3px #37819f9e;
+}

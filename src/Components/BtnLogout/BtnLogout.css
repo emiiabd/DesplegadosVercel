@@ -1,0 +1,16 @@
+.btnLogout{
+  padding: 8px;
+  border: 1px solid var(--grayDark-color);
+  border-radius: 12px;
+  background-color: var(--btnRed-color);
+  color: var(--primary-color);
+  font-size: 16px;
+  font-family: var(--FFamily);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+.btnLogout:hover{
+  background-color: var(--btnRedHover-color);
+}

@@ -1,0 +1,17 @@
+.btnBack{
+  padding: 6px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--graySolid-color);
+  color: var(--primary-color);
+  font-size: 23px;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnBack:hover {
+  background-color: var(--tertiary-color);
+}

@@ -1,0 +1,49 @@
+.WS{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--grayLight-color);
+  border-radius: 12px;
+  padding: 10px;
+  width: 90%;
+  font-size: 20px;
+  height: fit-content;
+  text-align: center;
+}
+
+.WS:hover{
+  cursor: pointer;
+  background-color: var(--tertiary-color);
+}
+
+.imageWS{
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--grayLight-color);
+}
+
+.imageWS img{
+  width: 100%;
+}
+
+@media screen and (max-width: 520px) {
+  .WS{
+    width: 100%;
+    font-size: 16px;
+    min-height: 3rem;
+  }
+
+  .imageWS{
+    width: 35px;
+    height: 35px;
+  }
+  
+}

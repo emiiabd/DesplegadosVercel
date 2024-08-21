@@ -1,0 +1,115 @@
+.workSpace {
+  justify-content: flex-start !important;
+  height: 100vh !important;
+  gap: 8px;
+}
+
+.hiddenNav{
+  position: absolute;
+  top: 60px;
+  width: 90%;
+  left: 5%;
+  background-color: var(--graySolid-color);
+  border-radius: 2px 2px 6px 6px;
+  z-index: 2;
+  display: none;
+}
+
+.navWS {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-between;
+  margin: 12px 12px 0;
+  background-color: var(--BgShadow-color);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.topWS{
+  width: 95%;
+}
+.navWS .btnHidden{
+  display: none;
+}
+
+.havWS h3 {
+  font-weight: 600;
+}
+
+.btnWS {
+  display: inherit;
+  gap: 6px;
+}
+
+.chatBox{
+  display: flex;
+  width: 90%;
+  min-height: 90%;
+  background-color: var(--BgShadow-color);
+  border: 12px solid rgba(0, 0, 0, 0);
+  border-radius: 6px;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+
+.bodyWS {
+  display: flex;
+  width: 95%;
+  height: 90%;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  gap: 8px;
+}
+
+.channelView {
+  background-color: var(--BgShadow-color);
+  width: 250px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.channelView .channels{
+  width: 100%;
+}
+
+.channelView .hiddenCreateChannel{
+  margin: 5px;
+  background-color: #797a79db;
+  padding: 0;
+  width: 95%;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 520px) {
+
+  .hiddenNav{
+    display: block;
+  }
+  
+  .navWS{
+    width: 90%;
+  }
+
+  .navWS .btnHidden{
+    display: flex;
+  }
+
+  .channelView{
+    display: none;
+  }
+
+  .bodyWS{
+    width: 100%;
+  }
+
+  .channelNames {
+    gap: 0px;
+  }
+}

@@ -1,0 +1,12 @@
+.Register .loginForm{
+    padding: 40px;
+    height: 100%;
+}
+
+@media screen and (max-width: 520px) {
+
+    .Register .loginForm{
+        padding: 18px;
+    }
+    
+}

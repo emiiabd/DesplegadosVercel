@@ -1,0 +1,119 @@
+.messagesScreen {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.messagesScreen .messages {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0px;
+}
+
+.messageBox {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.msgInfo {
+  background-color: #8c8c8c42;
+  border-radius: 12px;
+  padding: 6px;
+  max-width: 85%;
+}
+
+.msgName {
+  font-size: 14px;
+  color: var(--primary-color);
+  font-weight: 300;
+}
+
+.Me .msgName {
+  color: #d8a58e;
+  background-color: #d8a58e42;
+  border-radius: 6px;
+  padding: 1px 6px;
+  width: max-content;
+}
+
+.msgContent {
+  padding: 4px 0px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.msgContent p{
+  word-wrap: break-word;
+}
+
+.msgHour {
+  font-size: 10px;
+  color: #aaaaaa;
+  text-align: end;
+}
+
+.msgImg{
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--grayLight-color);
+}
+
+.msgImg img{
+  width: 100%;
+}
+
+.date {
+  margin-bottom: 8px;
+  width: 100%;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date hr {
+  width: 100%;
+  position: relative;
+  top: 12px;
+  z-index: 0;
+  border-style: solid;
+  color: #c0c0c0a8;
+}
+
+.dateInfo {
+  position: relative;
+  background-color: #28342f;
+  z-index: 1;
+  top: 0;
+  padding: 0px 15px;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 17px;
+  border: 2px solid #c0c0c0a8;
+}
+
+.dateInfo span {
+  font-size: 10px;
+  color: #c0c0c0;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 520px) {
+  .msgImg{
+    width: 35px;
+    height: 35px;
+  }
+}
