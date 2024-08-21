@@ -2,11 +2,11 @@
 export const DATA = [
   {   
     userId: '9c2ff531-a71f-4ee6-b45b-ffa94bad7fe7',
-    userThumbnail: './public/pictures/jorge.jpg',
+    userThumbnail: '/pictures/jorge.jpg',
     userMemory: [{
       workSpace: 'proyecto 1',
       workSpaceID: 1,
-      workSpaceThumbnail: './public/pictures/proyect_1.jpg',
+      workSpaceThumbnail: '/pictures/proyect_1.jpg',
       channels: [
         {
           name: 'General',
