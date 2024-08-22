@@ -7,10 +7,12 @@ import { useGlobalContext } from '../../Context/GlobalContext'
 import { v4 as uuid } from 'uuid';
 
 const WorkSpace = () => {
+  //Parameters
   const parametros =useParams();
   const {userID, setErrors} = useGlobalContext();
   const {workSpaceID, channelID} = parametros;
 
+  //Get user info
   const {
     workSpace,
     channels
@@ -18,12 +20,13 @@ const WorkSpace = () => {
 
   const {userThumbnail} = getUserById(userID);
   
+  //States
   const [hiddenNav, setHiddenNav] = useState(false);
   const [newChannelState, setNewChannelState] = useState(false);
   const [message, setMessage] = useState({content: ''});
   const [messagesMemory, setMessagesMemory] = useState(channels.find((i) => i.id === channelID).messages);
 
-  //Reset Errors
+  //UseEffects
   useEffect(() => {
     setErrors({});
   }, [newChannelState]);
@@ -32,6 +35,7 @@ const WorkSpace = () => {
     setMessagesMemory(channels.find((i) => i.id === channelID).messages);
   }, [message, channelID]);
 
+  //Handlers
   const handleOnSubmit = (e) => {
     let date = new Date();
     e.preventDefault();
@@ -39,7 +43,7 @@ const WorkSpace = () => {
       author: 'yo',
       content: String(message.content),
       thumbnail: `${userThumbnail}`,
-      date: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`, 
+      date: `${date.getFullYear()}-${String(date.getMonth()).length == 1 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1}-${String(date.getDate()).length == 1 ? '0' + date.getDate() : date.getDate()}`, 
       hour: `${String(date.getHours()).length == 1 ? '0' + date.getHours() : date.getHours()}:${String(date.getMinutes()).length == 1 ? '0' + date.getMinutes() : date.getMinutes()}`,
       id: `${uuid()}`
     };
@@ -47,6 +51,7 @@ const WorkSpace = () => {
     saveMessages(userID, workSpaceID, channelID, newMessage);
   };
 
+  //States handlers
   const renderHiddenNav = () => {
     setHiddenNav(!hiddenNav);
     if(newChannelState) setNewChannelState(!newChannelState);
@@ -91,6 +96,6 @@ const WorkSpace = () => {
       </div>
     </div>
   )
-}
+};
 
-export default WorkSpace
+export default WorkSpace;

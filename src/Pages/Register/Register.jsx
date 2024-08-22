@@ -8,8 +8,10 @@ import { validationSchema } from '../../Data/validations';
 
 const Register = () => {
 
+  //Context
   const { addError, deleteError, setErrors } = useGlobalContext();
 
+  //UseEffects
   useEffect(() => {
     setErrors({});
   }, []);
@@ -23,6 +25,7 @@ const Register = () => {
       validationRegister[prop] = validationSchema[prop]
   }};
 
+  //Handlers
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
     let bool = false;

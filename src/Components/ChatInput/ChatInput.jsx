@@ -4,9 +4,10 @@ import { TbSend } from "react-icons/tb";
 
 const ChatInput = ({handleOnSubmit, message, setMessage}) => {
 
-  
+  //States
   const [sendState, setSendState] = useState(false);
 
+  //Handlers
   const handleOnClick = () => {
     if(!sendState){
       setSendState(!sendState);

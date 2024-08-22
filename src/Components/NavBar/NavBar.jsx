@@ -6,6 +6,7 @@ import BtnLogout from '../BtnLogout/BtnLogout';
 
 const NavBar = () => {
 
+  //Context
   const {isLoggedIn} = useGlobalContext();
   
   return (

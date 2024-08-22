@@ -5,8 +5,10 @@ import { useGlobalContext } from "../../Context/GlobalContext";
 
 const RenderMessages = ({ messages }) => {
 
+  //Context
   const { name } = useGlobalContext();
 
+  //Render Date function
   const renderDate = (date) => {
     return (
       <div className="date" key={uuid()}>
@@ -18,13 +20,14 @@ const RenderMessages = ({ messages }) => {
     );
   };
 
+  //Variables
   let j = "";
   let bool = false;
   
+  //Render map
   const messagesRender = messages.map((i) => {
     bool = false;
     if (i.date !== j) bool = true;
-
     j = i.date;
 
     return (

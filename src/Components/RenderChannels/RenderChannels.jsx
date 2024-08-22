@@ -5,7 +5,8 @@ import './RenderChannels.css';
 const RenderChannels = ( {channels, workSpaceID, renderHiddenNav, renderNewChannel, channelID } ) => {
 
   const channelsName = channels.map((i) => 
-    <Link to={`/workSpace/${workSpaceID}/${i.id}`} key={i.id} className="channelName" style={String(i.id) === String(channelID) ? {backgroundColor: '#4f5d58'} : {}}>#{i.name}</Link>);
+    <Link to={`/workSpace/${workSpaceID}/${i.id}`} key={i.id} className="channelName" style={String(i.id) === String(channelID) ? {backgroundColor: '#4f5d58'} : {}}>#{i.name}</Link>
+  );
 
   return (
     <div className='channels'>

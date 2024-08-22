@@ -7,6 +7,8 @@ import { v4 as uuid } from "uuid";
 
 
 const LoginScreen = ({handleLoginSubmit,}) => {
+
+  //Context
   const {errorsValues} = useGlobalContext();
 
   //Geting the login Schema
@@ -16,6 +18,7 @@ const LoginScreen = ({handleLoginSubmit,}) => {
       loginSchema[prop] = formSchema[prop];
   }};
 
+  //Geting the formLogin from loginSchema
   const renderForm = [];
   for(const prop in loginSchema){
     renderForm.push(

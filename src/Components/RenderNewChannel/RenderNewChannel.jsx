@@ -6,12 +6,14 @@ import { useGlobalContext } from "../../Context/GlobalContext";
 
 const RenderNewChannel = ({ renderNewChannelState, userId, workSpaceID }) => {
 
+  //States and context
   const {addError, deleteError, errorsValues} = useGlobalContext();
-	const [name, setName] = useState("");
+  const [name, setName] = useState("");
 
-	const handleChangeOnValue = (e) => {
-		setName({...name,[e.target.name]: e.target.value});
-	};
+  //Handlers
+  const handleChangeOnValue = (e) => {
+    setName({...name,[e.target.name]: e.target.value});
+  };
 
   const validationEmpty = validationSchema['empty'];
   

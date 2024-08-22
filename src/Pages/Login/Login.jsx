@@ -7,12 +7,12 @@ import { useNavigate } from 'react-router-dom';
 import { validationSchema } from '../../Data/validations';
 
 const Login = () => {
-  const navigate = useNavigate();
-
+  
   // Context
+  const navigate = useNavigate();
   const {addError, deleteError, setErrors, USERS, setIsLoggedIn} = useGlobalContext();
 
-  //Reset Errors
+  //UseEffects
   useEffect(() => {
     setErrors({});
   }, []);
@@ -24,7 +24,7 @@ const Login = () => {
       validationLogin[prop] = validationSchema[prop]
   }};
 
-  //Login Submit
+  //Handlers
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);

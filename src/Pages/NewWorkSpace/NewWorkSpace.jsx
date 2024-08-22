@@ -40,6 +40,7 @@ const NewWorkSpace = () => {
 
     const userData = getUserById(getLocalUser().userId);
     const channels = [generateGeneralChannel()];
+    
     //Exist a new channel?
     data.NewChannel ? channels.push(generateNewChannel(data.NewChannel)) : null;
     userData.userMemory.push(

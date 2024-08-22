@@ -10,7 +10,7 @@ const Home = () => {
   const { isLoggedIn } = useGlobalContext();
   const navigate = useNavigate();
   
-  //Is logging in?
+  //UseEffects
   useEffect(() => {
     if (!isLoggedIn) navigate("/login");
   }, []);

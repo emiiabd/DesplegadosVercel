@@ -6,10 +6,12 @@ import { v4 as uuid } from "uuid";
 import { formSchema } from "../../Data/data";
 
 const RegisterScreen = ({ handleRegisterSubmit }) => {
+  
+  //Context
   const { errorsValues } = useGlobalContext();
 
+  //Geting the formRegister from formSchema
   const renderForm = [];
-
   for(const prop in formSchema){
     renderForm.push(
       <div className="inputs" key={uuid()}>

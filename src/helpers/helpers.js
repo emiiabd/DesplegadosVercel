@@ -2,7 +2,6 @@ import { DATA } from "../Data/data";
 import {v4 as uuid} from 'uuid';
 import { userData } from "../Data/userData";
 
-
 // DATA functions
 const guardarUsuariosEnLocal = (obj) => localStorage.setItem('userData', JSON.stringify(obj));
 const guardarDatosEnLocal= (obj) => localStorage.setItem('DATA', JSON.stringify(obj));

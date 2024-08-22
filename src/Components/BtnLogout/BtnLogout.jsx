@@ -6,6 +6,7 @@ import './BtnLogout.css';
 
 const BtnLogout = () => {
 
+  //Context
   const {handleLogOut} = useGlobalContext();
   
   return (

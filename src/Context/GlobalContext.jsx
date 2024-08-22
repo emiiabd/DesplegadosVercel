@@ -3,20 +3,20 @@ import { useNavigate } from "react-router-dom";
 import {DATA} from '../Data/data';
 import { getUserInfo, getUsuariosEnLocal } from "../helpers/helpers";
 
-
 const GlobalContext = createContext();
-
 
 export const GlobalContextProvider = ({children}) =>{
   
   // States
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('user') ? true : false);
+  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
+
+  //UseEffects
   useEffect(() => {
   if(!isLoggedIn) navigate('/login')}, []);
   
-  const [errors, setErrors] = useState({});
-
+  //Handlers and functions
   const handleLogOut = () => {
     localStorage.removeItem('user');
     setIsLoggedIn(false);
@@ -30,6 +30,7 @@ export const GlobalContextProvider = ({children}) =>{
     setErrors((prevState) => ({...prevState, [origen]: ''}));
   };
   
+  //Context
   const USERS = getUsuariosEnLocal();
   
   const {
@@ -55,7 +56,6 @@ export const GlobalContextProvider = ({children}) =>{
       userID,
       name,
       errorsValues,
-
       }}>
       {children}
     </GlobalContext.Provider>

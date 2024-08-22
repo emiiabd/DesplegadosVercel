@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContext";
 
 const NewWSRender = ({handleCreateNewWorkSpace, handleOnChange}) => {
+
+  //Context
   const {errorsValues} = useGlobalContext();
   
   return (

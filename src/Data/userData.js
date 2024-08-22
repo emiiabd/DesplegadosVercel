@@ -12,6 +12,5 @@ export const userData = [
   password: '1234',
   role: 'user',
   userId: '28e86d94-a017-41e5-9eaf-146b0015f114',
-}
-
+},
 ];

@@ -1,16 +1,17 @@
-import React from 'react'
-import { useGlobalContext } from '../../Context/GlobalContext'
-import { getUserById } from '../../helpers/helpers'
+import React from 'react';
+import { useGlobalContext } from '../../Context/GlobalContext';
+import { getUserById } from '../../helpers/helpers';
 import { Link } from 'react-router-dom';
-import './WSRender.css'
+import './WSRender.css';
 
 const WSRender = () => {
+  //context
   const {userID} = useGlobalContext();
   
   if (!userID) return;
   const userMemory = getUserById(userID).userMemory;
-
   
+  //Mapping the workSpace
   const workSpaces = userMemory.map((i)=>{;
     const generalChannel = i.channels.find((i)=>i.name === 'General');
     
